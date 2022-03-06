@@ -1,0 +1,21 @@
+public int[]binsertSort(int[] array) {
+                                for (int i = 1; i < array.length; ++i) {
+                                                int temp = array[i];         
+                                                int low = 0;
+                                                int high = i - 1; 
+                                                while(low<=high) {
+                                                                int mid = (high+low)/2;
+                                                                if(array[mid]<temp) {
+                                                                                low = mid+1;
+                                                                }
+                                                                 else {
+                                                                                high = mid-1;
+                                                                 }
+                                                }
+                                                for (int j = i-1; j > high; --j) {
+                                                                array[j+1] = array[j];
+                                                }
+                                                array[high+1] = temp;
+                                }
+                                return array;
+                }

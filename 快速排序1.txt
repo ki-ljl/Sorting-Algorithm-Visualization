@@ -1,0 +1,18 @@
+public static void QuickSort(int[] array,int low,int hight){
+                                if(low < hight){
+                                                int privotpos = partition(array,low,hight);
+                                                QuickSort(array,low,privotpos - 1);
+                                                QuickSort(array,privotpos + 1,hight);			
+                                 }
+               }	
+public static int partition(int[] array,int low,int hight){
+                                int privot = array[low];
+                                while(low < hight){
+                                                while(low < hight && array[hight] >= privot) --hight;
+                                                array[low] = array[hight];
+                                                while(low < hight && array[low] <= privot) ++low;
+                                                array[hight] = array[low];
+                                }
+                                array[low] = privot;
+                                return low;			
+               }

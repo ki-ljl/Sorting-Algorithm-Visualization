@@ -1,0 +1,14 @@
+public int[] insertSort(int[] array){
+                               if(array.length > 0){
+                                                for(int i = 1 ;i<array.length;i++){
+                                                                int current = array[i];
+                                                                int index = i;
+                                                                while(index-1 >= 0 && current < array[index-1]){
+                                                                                array[index] = array[index-1];
+                                                                                index--;
+                                                                }
+                                                                array[index] = current;
+                                                 }	
+                                }
+                                return array;
+                }

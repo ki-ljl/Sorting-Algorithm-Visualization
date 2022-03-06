@@ -1,0 +1,9 @@
+public static void QuickSort(int[] array,int low,int hight){
+                                if(low < hight){
+                                                int privotpos = partition(array,low,hight);
+
+                                                QuickSort(array,low,privotpos - 1);
+
+                                                QuickSort(array,privotpos + 1,hight);			
+                                 }
+               }	
